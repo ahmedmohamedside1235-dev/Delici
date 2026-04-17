@@ -114,3 +114,11 @@ function prevPopupMenu() {
     popupEle.dataset.index = prevIndex;
     nextContentMenu(prevIndex, popupEle);
 }
+
+// * show menu 
+function viewMenu(navName) {
+    let navEle = document.querySelector(`#Menu .nav_menu .box.${navName}`);
+    setTimeout(() => {
+        navEle.click();
+    }, 200);
+}

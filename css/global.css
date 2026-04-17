@@ -1,0 +1,443 @@
+:root {
+    --main-color: #E4C590;
+    --second-color: #171819;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Forum;
+}
+
+
+/* *custom scrollbar */
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: #333435;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 15px;
+}
+
+p {
+    color: #a7a7a7;
+}
+
+.mainButton {
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    padding: 15px 40px;
+    font-size: 14px;
+    background-color: transparent;
+    letter-spacing: 1.4px;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .5s;
+}
+
+.mainButton:hover {
+    color: #000;
+}
+
+.mainButton::before,
+.mainButton::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transition-duration: .5s;
+    background-color: var(--main-color);
+}
+
+.mainButton::before {
+    top: -100%;
+}
+
+.mainButton:hover::before {
+    top: 0%;
+    transform: translateY(-50%);
+}
+
+.mainButton::after {
+    bottom: -100%;
+}
+
+
+.mainButton:hover::after {
+    bottom: 2%;
+    transform: translateY(50%);
+}
+
+.mainColor {
+    color: var(--main-color);
+}
+
+.title {
+    width: fit-content;
+    margin: auto;
+    transition-delay: .5s;
+}
+
+.title h6 {
+    color: var(--main-color);
+    letter-spacing: 2px;
+}
+
+.title img {
+    width: 100px;
+    height: 14px;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 120;
+    background-color: rgb(from var(--main-color) r g b / 0.5);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 0;
+    transition-duration: .5s;
+    display: none;
+}
+
+.popup.show {
+    opacity: 1;
+}
+
+.popup.active {
+    display: block;
+}
+
+.popup .box {
+    width: 600px;
+    margin: auto;
+    background-color: var(--second-color);
+    margin-block: 30px;
+    border-radius: 10px;
+    display: block;
+    color: #fff;
+    padding: 30px 40px;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition-duration: 1s;
+}
+
+.popup.show .box {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.popup .box .head i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.popup .box .head h2 {
+    font-size: 40px;
+}
+
+.popup .box .body form .input {
+    background-color: transparent;
+    border: 1px solid #a7a7a7;
+    border-radius: 5px;
+    padding: 8px 16px;
+    width: 100%;
+    color: #a7a7a7;
+}
+
+.popup .box .body form textarea {
+    resize: none;
+    width: 520px;
+    height: 138px;
+}
+
+.popup[data-name="links"] {
+    backdrop-filter: initial;
+}
+
+.popup[data-name="links"] .box {
+    margin: 0;
+    margin-right: auto;
+    border-radius: 0;
+    width: 30%;
+    background-color: #0e0d0c;
+    background-image: url("../images/bg.png");
+    transform: translateX(-100%);
+}
+
+.popup[data-name="links"].show .box {
+    transform: translateX(0);
+}
+
+.popup[data-name="links"] .box>i {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.popup[data-name="links"] .box .image {
+    width: 150px;
+    margin: auto;
+}
+
+.popup[data-name="links"] .box .links ul li {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+    width: 200px;
+    margin: auto;
+}
+
+.popup[data-name="links"] .box .links ul li::before {
+    content: "";
+    display: none;
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--main-color);
+    background-color: transparent;
+    transform: rotate(45deg);
+    animation: rotateSq 10s linear infinite;
+    margin-right: 10px;
+}
+
+.popup[data-name="links"] .box .links ul li.active::before {
+    display: inline-block;
+}
+
+.popup[data-name="links"] .box .links ul li a {
+    color: #fff;
+    transition-duration: 0.5s;
+}
+
+.popup[data-name="links"] .box .links ul li a:hover,
+.popup[data-name="links"] .box .links ul li.active a {
+    color: var(--main-color);
+}
+
+.popup[data-name="links"] .box .body h2 {
+    font-size: 40px;
+}
+
+.popup[data-name="links"] .box .body p {
+    font-size: 14px;
+}
+
+.popup[data-name="links"] .box .body span.heading {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.popup[data-name="links"] .box .body a {
+    font-size: 32px;
+    position: relative;
+}
+
+.popup[data-name="links"] .box .body a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    position: absolute;
+    transition-duration: .5s;
+}
+
+.popup[data-name="links"] .box .body a:hover::after {
+    width: 100%;
+}
+
+
+.popup[data-name="menu"] .box .Ah-carousel-button i {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    z-index: 3;
+    font-size: 20px;
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition-duration: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup[data-name="menu"] .box .Ah-carousel-button i::before {
+    transform: rotate(-45deg);
+}
+
+.popup[data-name="menu"] .box .Ah-carousel-button.prev i {
+    left: 15px;
+}
+
+.popup[data-name="menu"] .box .Ah-carousel-button.next i {
+    right: 15px;
+}
+
+.popup[data-name="menu"] .box .head span.price {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 8px 10px;
+    background-color: var(--main-color);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.rotateSq {
+    animation: rotateSq 10s linear infinite;
+}
+
+.mainAnchor {
+    position: relative;
+}
+
+.mainAnchor::after {
+    content: "";
+    display: block;
+    width: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    position: absolute;
+    transition-duration: .5s;
+}
+
+.mainAnchor:hover::after {
+    width: 100%;
+}
+
+.square {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--main-color);
+    background-color: transparent;
+    margin: auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+section:nth-of-type(2n) {
+    background-color: #171819;
+}
+
+img {
+    user-select: none;
+}
+
+.loadingPadge {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-color);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20000;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+.loadingPadge.hide {
+    opacity: 0;
+}
+
+.loadingPadge.active {
+    display: flex;
+}
+
+.loadingPadge .reload {
+    background-color: transparent;
+    border: 3px solid #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border-top-color: #000;
+    animation: rotateSq 1s infinite linear;
+}
+
+.loadingPadge .Loading {
+    font-size: 80px;
+}
+
+.loadingPadge .Loading span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+}
+
+.loadingPadge .Loading span::after {
+    content: "D";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    color: #000;
+    animation: fillOutline 3s linear infinite ;
+}
+
+.loadingPadge .Loading span:nth-of-type(2)::after {
+    content: "E";
+    animation-delay: .2s;
+}
+
+.loadingPadge .Loading span:nth-of-type(3)::after {
+    content: "L";
+    animation-delay: .4s;
+}
+
+.loadingPadge .Loading span:nth-of-type(4)::after {
+    content: "I";
+    animation-delay: .6s;
+}
+
+.loadingPadge .Loading span:nth-of-type(5)::after {
+    content: "C";
+    animation-delay: .8s;
+}
+
+.loadingPadge .Loading span:nth-of-type(6)::after {
+    content: "I";
+    animation-delay: 1s;
+}

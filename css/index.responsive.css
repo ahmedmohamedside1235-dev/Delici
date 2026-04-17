@@ -1,0 +1,542 @@
+@media (max-width: 1300px) {
+
+    /* *custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .title h6 {
+        font-size: 14px;
+    }
+
+    /* *global button */
+    .mainButton {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .popup .box {
+        max-width: 300px;
+        padding: 20px 30px;
+    }
+
+    .popup .box .head h2 {
+        font-size: 30px;
+    }
+
+    .popup[data-name="links"] .box {
+        width: 90%;
+    }
+
+    .popup[data-name="links"] .box>i {
+        right: 15px;
+        font-size: 18px;
+    }
+
+    .popup[data-name="links"] .box .body h2 {
+        font-size: 35px;
+    }
+
+    .popup[data-name="links"] .box .body a {
+        font-size: 24px;
+    }
+
+    .popup[data-name="menu"] .box .head span.price {
+        position: absolute;
+        top: 10px;
+        padding: 5px;
+        font-size: 13px;
+    }
+
+    .popup[data-name="menu"] .box .head h2 {
+        font-size: 25px;
+    }
+
+    .popup[data-name="menu"] .box .Ah-carousel-button i {
+        width: 30px;
+        height: 30px;
+    }
+
+    .popup[data-name="menu"] .box .Ah-carousel-button.prev i {
+        left: 10px;
+    }
+
+    .popup[data-name="menu"] .box .Ah-carousel-button.next i {
+        right: 10px;
+    }
+
+    .popup[data-name="menu"] .box .body p {
+        font-size: 13px;
+    }
+
+    /* *Navegation bar */
+    nav .logo {
+        width: 40%;
+    }
+
+    /* *Header */
+    #Home .Ah-carousel .Ah-carousel-slider h1 {
+        font-size: 30px;
+    }
+
+    #Home .Ah-carousel .Ah-carousel-slider p {
+        font-size: 12px;
+    }
+
+    #Home .Ah-carousel .indicator {
+        bottom: 10px;
+        right: 25px;
+    }
+
+    #Home .booking {
+        bottom: 30px;
+        left: 30px;
+        padding: 5px 20px;
+    }
+
+    #Home .booking img {
+        width: 30px;
+    }
+
+    #Home .booking p {
+        font-size: 10px;
+    }
+
+    /** Section About */
+    #About .info {
+        margin-bottom: 48px;
+    }
+
+    #About .info h3 {
+        font-size: 30px;
+    }
+
+    #About .info p {
+        width: 90%;
+    }
+
+    #About .row .specialCart {
+        margin-top: 0;
+    }
+
+    #About .row .box:not(:last-child) {
+        margin-bottom: 48px;
+    }
+
+    /** Section Story */
+    #Story .content .part1 h2 {
+        font-size: 30px;
+    }
+
+    #Story .content .part1 p {
+        padding: 0 30px;
+        font-size: 14px;
+    }
+
+    #Story .content .part2 .item {
+        width: 270px;
+    }
+
+    #Story .content .part2 .image_top {
+        width: 30%;
+        top: -40px;
+        right: -20px;
+    }
+
+    #Story .content .part2 .image_bottom {
+        width: 50%;
+        left: -9%;
+    }
+
+    /** Section Dish */
+    #Dish .part1 .item {
+        height: 300px;
+        width: 100%;
+    }
+
+    #Dish .part2 .item {
+        width: 250px;
+        margin: auto;
+    }
+
+    #Dish .part2 .item p {
+        font-size: 13px;
+    }
+
+    #Dish .part2 .item h2 {
+        font-size: 30px;
+    }
+
+    #Dish .part2 .item span span.del {
+        font-size: 15px;
+    }
+
+    #Dish .part2 .item span span.price {
+        font-size: 19px;
+    }
+
+    /* *section Menu */
+    #Menu .head {
+        font-size: 30px;
+    }
+
+    #Menu .nav_menu {
+        overflow-x: scroll;
+        padding: 15px 12px 11px 12px;
+    }
+
+    #Menu .nav_menu .content {
+        min-width: fit-content;
+    }
+
+    #Menu .Ah_item .inner {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    /* *section chefs */
+    #Chefs .title h2 {
+        font-size: 30px;
+    }
+
+    #Chefs .content .box .item {
+        max-width: 280px;
+        margin: auto;
+    }
+
+    /* *Section contact */
+    #Contact .content {
+        width: 300px;
+    }
+
+    #Contact .content .head p {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 371px) and (max-width: 1300px) {
+
+    .popup .box {
+        max-width: 400px;
+    }
+
+    .popup[data-name="links"] .box {
+        width: 70%;
+    }
+
+    .popup[data-name="menu"] .box .Ah-carousel-button i {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* *Navegation bar */
+    nav .logo {
+        width: 30%;
+    }
+
+    /* *Header */
+    #Home .Ah-carousel .Ah-carousel-slider h1 {
+        font-size: 40px;
+    }
+
+    #Home .Ah-carousel .Ah-carousel-slider p {
+        font-size: 13px;
+    }
+
+    /** Section Story */
+    #Story .content .part1 h2 {
+        font-size: 40px;
+    }
+
+    /** Section Dish */
+    #Dish .part2 .item {
+        width: 290px;
+    }
+
+    #Dish .part2 .item p {
+        font-size: 15px;
+    }
+
+    #Dish .part2 .item h2 {
+        font-size: 40px;
+    }
+
+    #Dish .part2 .item span span.del {
+        font-size: 17px;
+    }
+
+    #Dish .part2 .item span span.price {
+        font-size: 21px;
+    }
+
+    /* *section Menu */
+    #Menu .Ah_item .inner {
+        max-width: 320px;
+        margin: auto;
+    }
+
+    /* *section chefs */
+    #Chefs .title h2 {
+        font-size: 40px;
+    }
+
+    #Chefs .content .box .item {
+        max-width: 300px;
+        margin: auto;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 1300px) {
+
+    .title h6 {
+        font-size: 15px;
+    }
+
+    /* *global button */
+    .mainButton {
+        font-size: 14px;
+    }
+
+    .popup .box {
+        max-width: 400px;
+    }
+
+    .popup[data-name="links"] .box {
+        width: 70%;
+    }
+
+    .popup[data-name="links"] .box .body a {
+        font-size: 30px;
+    }
+
+    /* *Navegation bar */
+    nav .logo {
+        width: 25%;
+    }
+
+    /* *Header */
+    #Home .Ah-carousel .Ah-carousel-slider h1 {
+        font-size: 50px;
+    }
+
+    #Home .Ah-carousel .Ah-carousel-slider p {
+        font-size: 14px;
+    }
+
+    /** Section About */
+    #About .info p {
+        width: 70%;
+    }
+
+    /** Section Story */
+    #Story .content .part2 .image_top {
+        width: 40%;
+        right: -40px;
+    }
+
+    #Story .content .part2 .image_bottom {
+        width: 45%;
+        left: -10%;
+    }
+
+    /** Section Dish */
+    #Dish .part2 .item {
+        width: 450px;
+    }
+
+    /* *section Menu */
+    #Menu .Ah_item .inner {
+        max-width: initial;
+        margin: initial;
+    }
+
+    /* *Section contact */
+    #Contact .content {
+        width: 400px;
+    }
+
+    #Contact .content .head p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
+
+    .popup[data-name="links"] .box {
+        width: 50%;
+    }
+
+    .popup .box {
+        max-width: 500px;
+    }
+
+    .popup .box .head h2 {
+        font-size: 35px;
+    }
+
+    .popup[data-name="menu"] .box .head span.price {
+        position: absolute;
+        top: 20px;
+        padding: 8px 10px;
+        font-size: 15px;
+    }
+
+    .popup[data-name="menu"] .box .body p {
+        font-size: 16px;
+    }
+
+    /* *Navegation bar */
+    nav .logo {
+        width: 20%;
+    }
+
+    /* *Header */
+    #Home .Ah-carousel .Ah-carousel-slider h1 {
+        font-size: 70px;
+    }
+
+    /** Section Story */
+    #Story .content .part1 p {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    #Story .content .part2 .item {
+        width: 85%;
+    }
+
+    /** Section Dish */
+    #Dish .part1 .item {
+        height: 100dvh;
+    }
+
+    #Dish .part2 .item {
+        width: 320px;
+    }
+
+    /* *section chefs */
+    #Chefs .title h2 {
+        font-size: 40px;
+    }
+
+    #Chefs .content .box .item {
+        max-width: initial;
+        margin: initial;
+    }
+
+    #Chefs .content .item .body h2 {
+        font-size: 25px;
+    }
+
+    #Chefs .content .box .item .body p:nth-of-type(1) {
+        font-size: 15px;
+    }
+
+    #Chefs .content .box .item .body p:nth-of-type(2) {
+        font-size: 12px;
+    }
+
+    /* *Section contact */
+    #Contact .content {
+        width: 500px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+    .collapse:not(.show) {
+        display: none !important;
+    }
+
+    .popup[data-name="links"] .box {
+        width: 40%;
+    }
+
+    .popup .box {
+        max-width: 600px;
+    }
+
+    .popup[data-name="menu"] .box .Ah-carousel-button i {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* *Section About */
+    #About .info {
+        margin-bottom: -30px;
+    }
+
+    #About .info h3 {
+        font-size: 50px;
+    }
+
+    #About .info p {
+        width: 40%;
+    }
+
+    #About .row .specialCart {
+        margin-top: 100px;
+    }
+
+    #About .row .box:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    /** Section Story */
+    #Story .content .part1 h2 {
+        font-size: 50px;
+    }
+
+    #Story .content .part2 .item {
+        width: 80%;
+    }
+
+    #Story .content .part2 .image_top {
+        width: 35%;
+    }
+
+    /** Section Dish */
+    #Dish .part2 .item {
+        width: 380px;
+    }
+
+    /* *section chefs */
+    #Chefs .title h2 {
+        font-size: 50px;
+    }
+
+    #Chefs .content .item .body h2 {
+        font-size: 30px;
+    }
+
+    #Chefs .content .box .item .body p:nth-of-type(2) {
+        font-size: 15px;
+    }
+
+    /* * */
+}
+
+
+@media (min-width: 1181px) and (max-width: 1300px) {
+    .popup .box {
+        max-width: 500px;
+    }
+
+    /* *Section About */
+    #About .info {
+        margin-bottom: -50px;
+    }
+
+    #About .row .specialCart {
+        margin-top: 110px;
+    }
+
+    /** Section Story */
+    #Story .content .part2 .image_top {
+        width: 30%;
+    }
+
+    #Story .content .part2 .image_bottom {
+        width: 50%;
+    }
+}
